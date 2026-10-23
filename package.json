@@ -1,0 +1,17 @@
+{
+  "name": "moviefinder",
+  "version": "1.0.0",
+  "description": "MovieFinder + Garuda AI: Multilingual cinematic movie discovery platform",
+  "main": "server/src/index.js",
+  "type": "module",
+  "scripts": {
+    "install:all": "npm install && npm --prefix server install && npm --prefix client install",
+    "dev": "concurrently -n \"SERVER,CLIENT\" -c \"blue,green\" \"npm --prefix server run dev\" \"npm --prefix client run dev\"",
+    "build": "npm --prefix client run build",
+    "start": "node server/src/index.js",
+    "test": "npm --prefix server test"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
